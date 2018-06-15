@@ -1,0 +1,11 @@
+<div class="col-sm-8">
+    <ul class="list-group">
+        <li class="list-group-item active">Phone details: {{vm.phone.name}}</li>
+        <li class="list-group-item">Features: {{vm.phone.additionalFeatures}}</li>
+        <li class="list-group-item">Availability: {{vm.phone.availability}}</li>
+        <li class="list-group-item">Camera features: {{vm.phone.camera.features}}</li>
+        <li ng-repeat="image in vm.phone.images" class="list-group-item">
+            <img ng-src="{{image}}" class="img-thumbnail"/>
+        </li>
+    </ul>
+</div>

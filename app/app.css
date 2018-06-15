@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched {
+    background-color: red;
+}
+
+input.ng-valid.ng-touched {
+    background-color: green;
+}
+
+.col-sm-3, .col-sm-8 {
+    overflow: scroll;
+    height: 750px;
+}

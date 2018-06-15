@@ -1,14 +1,38 @@
 <!doctype html>
-<html lang="en" ng-app>
-  <head>
-    <meta charset="utf-8">
-    <title>My HTML File</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <script src="bower_components/angular/angular.js"></script>
-  </head>
-  <body>
-
-    <p>Nothing here {{'yet' + '!'}}</p>
-
-  </body>
+<html lang="en" ng-app="phoneCatApp">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="./app.css"/>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="phone-service/phone-service.module.js"></script>
+  <script src="phone-add/phone-add.module.js"></script>
+  <script src="phone-add/phone-add.component.js"></script>
+  <script src="phone-list/phone-list.module.js"></script>
+  <script src="phone-list/phone-list.component.js"></script>
+  <script src="phone-details/phone-details.module.js"></script>
+  <script src="phone-details/phone-details.component.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+</head>
+<body>
+  
+  <!--<p>Nothing here {{'yet' + '!'}}</p>
+    <p>Calcul mathematiques: 13.14 =  {{13+14 | currency:"eur" | uppercase}}</p> 
+    <input type="button" ng-click="greet()" value="Salutations">
+  -->
+  
+  <div class="container-fluid">
+    <h1>Phone App</h1>
+    <phone-add></phone-add>
+    
+    <div class="row">
+      <phone-list></phone-list>
+      <div ng-view></div>
+    </div>
+  </div>
+</body>
 </html>

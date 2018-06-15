@@ -1,0 +1,14 @@
+<div class="row">
+    <form name="addForm">
+        <div class="form-group">
+            <label for="modelInput">Model: </label>
+            <input type="text" id="modelInput" ng-model="vm.newphone.name" required ng-model-options="{debounce: 1000}">
+            
+            <label for="commentInput">Comment: </label>
+            <input type="text" id="commentInput" ng-model="vm.newphone.snippet" required>
+            
+            <input ng-if="addForm.$valid" type="button" ng-click="vm.add()" value="Submit"/>
+            <input type="reset" value="Reset"/>
+        </div> 
+    </form>      
+</div>

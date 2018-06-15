@@ -1,0 +1,1 @@
+angular.module('phoneCatApp', ['phoneAdd', 'phoneList', 'phoneDetails', 'ngRoute', 'ngResource'])        

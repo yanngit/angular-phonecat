@@ -1,0 +1,17 @@
+<div class="col-sm-3">
+    <div class="form-group">
+        <label for="searchInput">Search: </label>
+        <input id="searchInput" ng-model="vm.query"/>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item active">Phone list: </li>
+        <li ng-repeat="phone in vm.phones | filter:vm.query" class="list-group-item">
+            {{phone.name}}
+            <a href="#/phones/{{phone.id}}"><img ng-src="{{phone.imageUrl}}" class="img-thumbnail"/></a>
+            <!--<img ng-src="{{phone.imageUrl}}" class="img-thumbnail" ng-click="vm.viewDetails(phone.id)"/>-->
+            <p> Description : <br />
+                {{phone.snippet}}
+            </p>
+        </li>
+    </ul>
+</div>
